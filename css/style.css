@@ -1,0 +1,1116 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+/*обнуление всех отступов и границ*/
+
+*,*:before,*:after{
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*меняет подсчет ширины блока для удобности */
+
+:focus,:active{outline: none;}
+a:focus,:active{outline: none;}
+/*уераем линии обводки у некоторых браузерах */
+
+nav, footer,header, aside{display: block;}
+/* просто делаем теги блочными */
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/* уравниваем поведение шрифтов для разных браузеров */
+
+input,button,textarea,h2,h3{font-family: 'Open Sans', sans-serif;}
+/* просто чтобы везде был один шрифт */
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: o;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+/* убираем особенности в разных браузерах */
+
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/* обнуляем зоголовки */
+
+h2{
+    color: #333333;
+}
+h2{
+    color: #777777;
+}
+
+
+
+@media (max-width: 930px){
+    .picture-camera img{
+        opacity:0;
+    }
+}
+/* исчезновение камеры при малой ширине для адаптивности */
+
+.conteiner{
+    max-width: 1140px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px auto;
+} 
+/* контейнер ограничивающив ширину */
+
+
+
+
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+/* Чисто хедер и его позиционирование */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 84px;
+}
+/* разбиение хедера на блок логотипа и меню */
+.menu{
+    display: flex;
+}
+.menu-item{
+    display: flex;
+}
+/* чисто чтобы меню было в строку */
+.menu-item > a{
+    font-size: 14px;
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+/* оформление меню и позиционирование элементов меню */
+.menu button{
+    background-color: #ffffff33;
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    font-family: sans-serif;
+    height: 35px;
+    width: 105px;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+/* оформление кнопки в меню и её позиционирование */
+.menu button:hover{
+    background-color: #54b5fa;
+    transition: 0.4s;
+}
+/* переливание при наведении */
+
+
+
+@media (max-width: 800px){
+
+    .menu-icon{
+        z-index: 5;
+        position: absolute;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        display: block;
+        right: 35px;
+    }
+    /* блок с тремя полосоками */
+    .menu-icon:after,
+    .menu-icon:before,
+    .menu-icon span{
+        background-color: white;
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+    }
+    /* оформление трёх полосок */
+    .menu-icon:after,
+    .menu-icon:before{
+        content: "";
+    }
+     /* оформление трёх полосок */
+    .menu-icon:after{
+        bottom: 0%;
+    }
+     /* оформление трёх полосок */
+    .menu-icon::before{
+        top: 10%;
+    }
+     /* оформление трёх полосок */
+    .menu-icon span{
+        top: 55%;
+        transform: scale(1) translate(0px, -45%);
+    }
+     /* оформление трёх полосок */
+    .menu{
+        display: flex;
+        width: 100%;
+        position: relative;
+        align-items: center;
+        z-index: 2;
+    }
+    /* оформление блока со всем что есть вверху*/
+    .menu button{
+        position: absolute;
+        top: -15px;
+        right: 100px;
+    }
+    /* позиционирование кнопки */
+    .menu-item{
+        display: block;
+        left: -120px;
+        top: -230px;
+        margin-left: 20px;
+        position: absolute;
+        background-color: white;
+        color: #777;
+        width: 113%;
+        z-index: -1;
+        transition: 1s;
+        opacity: 0;
+    }
+    /* позиционирование и оформление списки ссылок*/
+    .menu-item > a{
+        color: #777;
+        margin: 20px;
+        font-weight: 400;
+    }
+    /* оформление текста ссылок*/
+}
+/* муню бургер */
+
+
+.scroll{
+    height: 45px;
+    width: 45px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50%;
+    background-color: #1E9DF7;
+    z-index: 3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* оформление кнопки что вверх закидывает */
+.scroll:hover{
+    background-color: #32a7fb;
+}
+/* Наведение на её */
+.scroll img{
+    width: 15px;
+}
+/* просто регулировка размера фото */
+
+
+
+
+
+.first-view{
+    background-image: url(../img/first-view.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+    left: 0;
+    top: 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+}
+/* то что видим при входе, а именно фотка и её позиционирование, позиционирование блока что поверх фотки */
+.first-view-block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+/* позиционирование элементов что в блоке что поверх фотки */
+.first-view-block h2,h3,a{
+    color: white;
+}
+/* общие характеристики текстов */
+.first-view-block h2{
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 10px;
+    letter-spacing: -0.05em;
+}
+/* Оформление крупного текста */
+.first-view-block h3{
+    font-size: 15px;
+}
+/* Оформление текста поменьше */
+.first-view-block a{
+    font-size: 14px;
+    font-family: sans-serif;
+    margin: 15px 0 0 0;
+    width: 145px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Оформление текста ссылки и позиционирование надписи и катинки ссылки */
+.play-button img{
+    height: 50px;
+    margin: 5px 0 5px 0;
+    transition: 0.4s;
+}
+/* Оформление картинки в ссылке */
+.play-button img:hover{
+    height: 60px;
+    margin: 0px 0 0px 0;
+    transition: 0.4s;
+}
+/* Оформление анимации при навеении на картинку в ссылке */
+.play-button{
+    height: 60px;
+    width: 60px;
+}
+/* блок в котором лежит картинка, существует только для hover-а */
+.first-dron{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    width: 100%;  
+}
+/* позиционирование блока с фоткой дрона */
+.first-dron img{
+    z-index: 2;
+    width: 40%;
+    height: auto;
+    bottom: 0;
+    animation: move 4s infinite linear;
+}
+/* позиционирование фотки дрона */
+@keyframes move {
+    0%{
+        transform: translate(0,20px);
+    }
+    50%{
+        transform: translate(0,0px);
+    }
+    100%{
+        transform: translate(0,20px);
+    }
+}
+/* для анимации движения дрона */
+@media (width < 700px) {
+    .first-dron img{
+        z-index: 2;
+        width: 0%;
+    }
+}
+
+
+
+
+
+.advantages{
+    padding: 200px 0 80px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
+    text-align: center;
+}
+/* блок с 4 преимуществами и его позиционирование */
+@media (width < 1200px) {
+    .advantages{
+        max-width: 850px;
+        margin: 0px auto;
+    }
+}
+/* чтобы когда ширина уменьшаеться не было момента когда сверху 3 блока а снизу 1(некрасиво) */
+.advantages-block{
+    margin: 15px 15px 15px 15px;
+    height: 255px;
+    width: 255px;
+    background-color: #f1f5f9;
+    padding: 25px 10px 35px 10px;
+    border-radius: 2%;
+    transition: 0.4s;
+}
+/* блок преимущества с его характеристиками */
+.advantages-block:hover{
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+/* анимация при наведении на блок преимущества */
+.advantages h2{
+    color: #333333;
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+    line-height: 1.7;
+    letter-spacing: -0.05em;
+    font-size: 18px;
+}
+/* крупный текст внутри блока с преимуществами */
+.advantages h3{
+    margin: 15px 0 5px 0;
+    font-size: 16px;
+    line-height: 23px;
+    color: #777;
+    font-weight: 400;
+}
+/* мелкий текст внутри блока с преимуществами */
+
+
+
+
+
+
+.picture-camera{
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+    background-color: #f1f5f9;
+    overflow: hidden;
+    
+}
+/* обормление и позиционирование блока с камерой дрона */
+.picture-camera-dron{
+    max-width: 1140px;
+    height: 445px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/* кастыль для того чтобы камеры при position: absolute; позиционировалась как в контейнере */
+.picture-camera img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* позиционирование камеры */
+.for-text{
+    width: 540px;   
+}
+/* просто чтобы блок с текстом позиционировался как хочу */
+.for-text h2{
+    margin: 0 0 15px 0;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #333333;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+}
+/* оформление крупного текста */
+.for-text h3{
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    line-height: 23px;
+    color: #777777;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+}
+/* оформление мелкого текста */
+.for-text button{
+    background-color: #1E9DF7;
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    height: 35px;
+    width: 135px;
+    border-radius: 3px;
+    transition: 0.4s;
+}
+/* оформление кнопки */
+.for-text button:hover{
+    background-color: #39abfd;
+    transition: 0.4s;
+}
+
+
+
+
+
+/* переливание при наведении */
+.text-block{
+    padding: 80px 0 0 0;
+    text-align: center;
+    margin-bottom: 35px;
+}
+/* Оформление  блока с текстом перед возможностями */
+.text-block h2{
+    font-size: 32px;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    margin-bottom: 10px;
+}
+/* Оформление текста перед возможностями */
+.text-block h3{
+    color: #777777;
+    font-size: 15px;
+}
+/* Оформление текста перед возможностями */
+.specification{
+    min-height: 555px;
+    padding: 0 0 80px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* позиционирование блока возможностей */
+.specification > .option{
+    width: 310px;
+    height: 230px;
+    padding: 20px;
+}
+/* параметры возможности по отдельности */
+.specification > .option > h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #333;
+    letter-spacing: -0.05em;
+    font-size: 18px;
+    margin: 0 0 5px 0;
+}
+/* текст внутри блока возможности */
+.specification > .option > h3{
+    font-size: 15px;
+    color: #777777;
+    font-weight: 400;
+    line-height: 23px;
+}
+/* текст внутри блока возможности */
+.specification-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
+}
+/* оформление блока с блоком фотки */
+.specification-img > img{
+    padding: 10px;
+    height: 80px;
+    background: #F1F5F9;
+    color: black;
+    border-radius: 5%;
+    transition: 0.4s;
+}
+/* оформление блока фотки */
+.specification-img img:hover{
+    transform: scale(1.15);
+    transition: 0.4s;
+}
+/* чисто для наведения */
+
+
+
+
+
+.slick-list {
+    overflow: hidden;
+}
+/* убираем переполнение у слайдеров */
+.slick-track{
+    display: flex;
+}
+/* позиционируем слайды в ряд */
+.slider-gallery{
+    position: relative;
+    /* border: #777 1px solid; */
+}
+/* позиционирование (вроде для кнопок)  слайдер с фотками с дрона*/
+.slider-gallery .slick-arrow{
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 60px;
+    opacity: 0.6;
+    transition: 0.4s;
+}
+.slider-gallery .slick-arrow:hover{
+    opacity: 1;
+    transition: 0.4s;
+}
+/* позиционирование и оформление кнопок слайдер с фотками с дрона*/
+.slider-gallery .slick-arrow.slick-prev{
+    left: 0;
+    background: url(../img/prev.png) 0 0 / 100% no-repeat;
+}
+/* оформление левой кнопки переключения слайдера слайдер с фотками с дрона*/
+.slider-gallery .slick-arrow.slick-next{
+    right: 0;
+    background: url(../img/next.png) 0 0 / 100% no-repeat;
+}
+/* оформление правой кнопки переключения слайдера слайдер с фотками с дрона*/
+.slider-item-gallery{
+    width: 50%;
+}
+/* настраиваем адаптивность размеров слайдер с фотками с дрона*/
+.slider-item-gallery img{
+    width: 100%;
+    height: auto;
+}
+/* настраиваем адаптивность размеров слайдер с фотками с дрона */
+
+
+
+
+
+.joystick{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+/* настройка блока с картинкой джойстика на переднем плане слайдера */
+.joystick img{
+    width: 28%;
+    height: auto;
+    position: absolute;
+    bottom: -1px;
+}
+/* настройка картинки джойстика на переднем плане слайдера */
+@media (max-width: 1100px){
+    .joystick img{
+        width: 35%;
+    }
+}
+/* убирание на мелких дисплеях картинки джойстика на переднем плане слайдера */
+
+
+
+
+
+.dron-sell{
+    width: 100%;
+    background-color: #F1F5F9;
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+    padding: 80px 0 80px 0;
+    text-align: center;
+}
+/* оформление всего блока слайдер продажи дронов */
+.dron-sell-text{
+    margin-bottom: 40px;
+}
+/* отктуп от текста до слайдера слайдер продажи дронов*/
+.dron-sell-text > h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #333333;
+    line-height: 1.2;
+    letter-spacing: -.05em;
+    font-size: 32px;
+}
+/* оформление жирного текста слайдер продажи дронов*/
+.dron-sell-text > h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #777777;
+    line-height: 22px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+/* оформление тусклого текста слайдер продажи дронов*/
+.slider-dron-sell{
+    position: relative;
+}
+@media(width < 1140px){
+    .slider-dron-sell{
+        width: 550px;
+        margin: 0 auto;
+    }
+}
+@media(width < 560px){
+    .slider-dron-sell{
+        width: 273px;
+        margin: 0 auto;
+    }
+}
+/* позиционирование (вроде для кнопок)  слайдер продажи дронов*/
+.slider-dron-sell .slick-arrow{
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 60px;
+    opacity: 0.6;
+    transition: 0.4s;
+}
+/* оформление стрелок переключателей слайдер продажи дронов*/
+.slider-dron-sell .slick-arrow:hover{
+    opacity: 1;
+    transition: 0.4s;
+}
+/* оформление стрелок переключателей после наведения слайдер продажи дронов*/
+.slider-dron-sell .slick-arrow.slick-prev{
+    left: 5px;
+    background: url(../img/prev.png) 0 0 / 100% no-repeat;
+}
+/* оформление левой кнопки переключения слайдера слайдер продажи дронов*/
+.slider-dron-sell .slick-arrow.slick-next{
+    right: 0;
+    background: url(../img/next.png) 0 0 / 100% no-repeat;
+}
+/* оформление правой кнопки переключения слайдера слайдер продажи дронов*/
+.slider-item-dron-sell{
+    background-color: white;
+    margin-left: 5px;
+    overflow: hidden;
+}
+/* оформление блока слайдера слайдер продажи дронов*/
+.slider-item-dron-sell-img{
+    width: 268px;
+    height: 268px;
+    overflow: hidden;
+}
+/* оформление блока с картинкой слайдер продажи дронов*/
+.slider-item-dron-sell-img button{
+    background-color: #1E9DF7;
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    height: 35px;
+    width: 135px;
+    border-radius: 3px;
+    transition: 0.4s;
+    opacity: 0;
+}
+/* задаю начальные свойства кнопки что появляеться при наведении слайдер продажи дронов*/
+.slider-item-dron-sell img{
+    width: 268px;
+    transition: 0.4s;
+}
+/* начальные свойства картинки слайдер продажи дронов*/
+.slider-item-dron-sell-img:hover img{
+    width: 298px;
+    transform: translate(-15px,-15px);
+    transition: 0.4s;
+}
+/* после наведения на картинку  слайдер продажи дронов*/
+.slider-item-dron-sell-img:hover button{
+    opacity: 1;
+    transform: translate(0,-100px);
+}
+/*  после наведения на картинку слайдер продажи дронов*/
+.slider-item-dron-sell-block{
+    border-top: 1px solid #eaeaea;
+}
+/* блок с текстом ниже картинки слайдер продажи дронов*/
+.slider-item-dron-sell-block  h2{
+    color: #333333;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: -0.05em;
+}
+/* жирный текст блок с текстом ниже картинки слайдер продажи дронов*/
+.slider-item-dron-sell-block h2:hover{
+    color: #0f86dc;
+    transition: 0.4s;
+}
+/* после наведения слайдер продажи дронов*/
+.slider-item-dron-sell-block  h3{
+    color: #777777;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+/* тусклый текст блок с текстом ниже картинки  слайдер продажи дронов*/
+.slider-item-dron-sell-block  h3 span{
+    color: rgb(0, 159, 0);
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+/* тот текст что правее тусклого блок с текстом ниже картинки  слайдер продажи дронов*/
+.slider-item-dron-sell-block .block h2{
+    color: red;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+/* текст внутри  слайдер продажи дронов*/
+.slider-item-dron-sell-block .block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* блок для того чтобы звезды не поплыли слайдер продажи дронов*/
+.slider-item-dron-sell-block .star img{
+    height: 12px;
+    width: auto;
+}
+/* блок для того чтобы звезды не поплыли слайдер продажи дронов*/
+
+
+
+
+
+.opinion{
+    min-height: 500px;
+    text-align: center;
+    padding: 80px 0 80px 0;
+}
+/* настройка блока слайдер продажи дронов*/
+.opinion-text{
+    margin-bottom: 40px;
+}
+/* настройка блока с текстов слайдер продажи дронов */
+.opinion-text > h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.2;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+/* темный текст слайдер продажи дронов*/
+.opinion-text > h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #777777;
+    line-height: 22px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+/* светлый текст слайдер продажи дронов*/
+.slider-opinion{
+    position: relative;
+}
+/* позиционирование (вроде для кнопок)  слайдер с фотками с дрона*/
+.slider-opinion .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* позиционироваине кнопок переключения срайдера */
+.slider-opinion .slick-dots li{
+    list-style: none;
+}
+/* настройка кнопи переключения срайдера как списка  */
+.slider-opinion .slick-dots button{
+    font-size: 0;
+    width: 7px;
+    height: 7px;
+    background-color: #a1a1a1;
+    border-radius: 50%;
+    margin: 5px;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* настройка всех кнопой переключения срайдера */
+.slider-opinion .slick-active button{
+    background-color: #1E9DF7;
+    width: 11px;
+    height: 11px;
+    margin: 3px;
+    transition: 0.4s;
+}
+/* настройка кнопи переключения срайдера, именно активной */
+.slider-item-opinion{
+    width: 100%;
+}
+/* настраиваем адаптивность размеров слайдера */
+.slider-item-opinion-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* настраиваем адаптивность размеров слайда*/
+.slider-item-opinion img{
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+/* настраиваем картинку  */
+.slider-item-opinion h3{
+    font-size: 15px;
+    color: #777777;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+    line-height: 20px;
+    width: 65%;
+}
+/* настройка тусклогго тескста внутри слайда */
+.slider-item-opinion h2{
+    font-size: 16px;
+    color: #333333;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 5px;
+    line-height: 20px;
+    width: 65%;
+}
+/* настройка темного текста внутри слайда */
+.slider-item-opinion .star img{
+    height: 12px;
+    width: auto;
+}
+/* настройка звездочек внутри слайда */
+
+
+
+
+
+
+.relax{
+    height: 450px;
+    width: 100%;
+    background-image:url(../img/realx.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+/* Оформление блока о предложении присоеденится */
+.relax h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #FFFFFF;
+    letter-spacing: -0.05em;
+    font-size: 36px;
+}
+/* Текст внутри блока о предложении присоеденится */
+.relax h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+/* Текст внутри блока о предложении присоеденится */
+
+
+
+
+
+.question{
+    padding: 80px 0 50px 0;
+    width: 100%;
+    min-height: 600px;
+}
+/* оформление блока с вопросами */
+.question-text{
+    margin-bottom: 40px;
+    text-align: center;
+}
+/* оформление верхнего текста в блоке с вопросами  */
+.question-text > h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #333333;
+    letter-spacing: -0.05em;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+/* оформление верхнего текста в блоке с вопросами  */
+.question-text > h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #777777;
+    font-size: 15px;
+}
+/* оформление верхнего текста в блоке с вопросами  */
+.question-main{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* позиционирование блоков с вопросами */
+.question-block{
+    width: 450px;
+    height: 178px;
+    padding: 15px;
+}
+/* оформление блоков с вопросами */
+@media (max-width: 950px){
+    .question-block{
+        width: 100%;
+    }
+}
+/* изза flex-direction блоки некрасиво стоят*/
+.question-block > h2{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.7;
+    color: #333333;
+    letter-spacing: -0.05em;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+/* текст блока с вопросами */
+.question-block > h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #777777;
+    font-size: 15px;
+}
+/* текст блока с вопросами */
+
+
+
+
+
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+/* контейнер для нужного рассположения формы, по центру */
+.for-form {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -30px;
+    width: 399px;
+}
+/* контейнер для нужного рассположения формы, по центру */
+.for-form > input{
+    width: 300px;
+    height: 60px;
+    background-color: #F1F5F9;
+    border-radius: 60px 0 0 60px;
+    padding-left: 30px;
+    color: #777;
+    font-size: 14px;
+    line-height: 60px;
+}
+/* Настройка ввода эмейла */
+.for-form button{
+    width: 95px;
+    height: 60px;
+    background-color: #1392ed;
+    border-radius: 0 60px 60px 0;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    transition: 0.4s;
+}
+/* настройка кнопки около ввода эмейла */
+.for-form button:hover{
+    background-color: #319cea;
+    transition: 0.4s;
+}
+/* перелевание при наведении */
+
+
+
+
+
+.pred-footer-color{
+    background-color: #212121;
+    border: #333333 solid 1px;
+}
+/* Цвет футера */
+.pred-footer{
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 80px 0 80px 0;
+}
+/* настроики позиционирования и размеров футера */
+.pred-footer-block{
+    width: 240px;
+    height: 185px;
+    padding: 0 15px 0 15px;
+}
+/* настройки размеров блоков внутри футера */
+.pred-footer-block > h2{
+    color: #DDDDDD;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.7;
+    letter-spacing: -0.05em;
+}
+/* большой текст внутри блоков что внутри футора */
+.pred-footer-block  h3{
+    color: #BBBBBB;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+/* маленький текст внутри блоков что внутри футора */
+.pred-footer-block > .for-img{
+    margin-bottom: 15px;
+}
+/* лого что в футере */
+@media (width < 1200px) {
+    .pred-footer{
+        max-width: 700px;
+        margin: 0px auto;
+    }
+}
+/* чтобы когда ширина уменьшаеться не было момента когда сверху 3 блока а снизу 1(некрасиво) */
+
+
+
+
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212121;
+    width: 100%;
+    height: 63px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+/* настроики позиционирования и размеров футера */
