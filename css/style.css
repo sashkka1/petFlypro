@@ -203,8 +203,30 @@ header{
     }
     /* оформление текста ссылок*/
 }
-/* муню бургер */
+/* меню бургер */
 
+@media (max-width: 400px){
+    .menu-icon{
+        right: 15px;
+    }
+    .menu button{
+        position: absolute;
+        top: -15px;
+        right: 70px;
+    }
+}
+@media (max-width: 350px){
+    .menu-icon{
+        right: 5px;
+    }
+    .menu button{
+        position: absolute;
+        top: -15px;
+        right: 50px;
+        width: 80px;
+        height: 30px;
+    }
+}
 
 .scroll{
     height: 45px;
@@ -1046,13 +1068,16 @@ header{
 /* настройка кнопки около ввода эмейла */
 
 @media (max-width: 800px){
+    .for-form {
+        width: 285px;
+    }
     .for-form > input{
-        width: 230px;
+        width: 220px;
         height: 50px;
         font-size: 12px;
     }
     .for-form button{
-        width: 75px;
+        width: 65px;
         height: 50px;
         font-size: 10px;
     }
