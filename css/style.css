@@ -268,6 +268,12 @@ header{
     letter-spacing: -0.05em;
 }
 /* Оформление крупного текста */
+@media (max-width: 800px){
+    .first-view-block h2{
+        font-size: 30px;
+    }
+}
+/* чтобы нормально смотрелся с телефона */
 .first-view-block h3{
     font-size: 15px;
 }
@@ -1038,6 +1044,19 @@ header{
     transition: 0.4s;
 }
 /* настройка кнопки около ввода эмейла */
+
+@media (max-width: 800px){
+    .for-form > input{
+        width: 230px;
+        height: 50px;
+        font-size: 12px;
+    }
+    .for-form button{
+        width: 75px;
+        height: 50px;
+        font-size: 10px;
+    }
+}
 .for-form button:hover{
     background-color: #319cea;
     transition: 0.4s;

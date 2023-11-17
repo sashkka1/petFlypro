@@ -84,8 +84,7 @@ $(document).ready(function(){
                 breakpoint: 560,
                 settings: {
                     slidesToShow: 1
-                }
-            
+                } 
             }
         ]
     });
