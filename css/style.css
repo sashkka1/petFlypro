@@ -193,7 +193,7 @@ header{
         width: 113%;
         transition: 0.2s;
         overflow: hidden;
-        height: 190px;
+        height: 0px;
     }
     /* позиционирование и оформление списки ссылок*/
     .menu-item > a{
