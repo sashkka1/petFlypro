@@ -185,15 +185,15 @@ header{
     .menu-item{
         display: block;
         left: -120px;
-        top: -230px;
+        top: 34px;
         margin-left: 20px;
         position: absolute;
         background-color: white;
         color: #777;
         width: 113%;
-        z-index: -1;
-        transition: 1s;
-        opacity: 0;
+        transition: 0.2s;
+        overflow: hidden;
+        height: 190px;
     }
     /* позиционирование и оформление списки ссылок*/
     .menu-item > a{

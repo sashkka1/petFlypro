@@ -108,12 +108,10 @@ $(document).ready(function(){
 
 document.getElementById('open').addEventListener('click', function(){
     let x = document.getElementById('overplay');
-    if (x.style.opacity == "1"){
-        x.style.opacity = "0";
-        x.style.top = "-230px";
+    if (x.style.height == "190px"){
+        x.style.height = "0px";
     } else {
-        x.style.opacity = "1";
-        x.style.top = "34px";
+        x.style.height = "190px";
     };
 });
 // выпадающее меню бургер при маленьком разрешении
