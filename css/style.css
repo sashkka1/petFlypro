@@ -80,7 +80,7 @@ h2{
 header{
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 11;
 }
 /* Чисто хедер и его позиционирование */
 .header{
@@ -811,7 +811,9 @@ header{
     width: auto;
 }
 /* блок для того чтобы звезды не поплыли слайдер продажи дронов*/
-
+.slider-item-dron-sell-block .star{
+    display: flex;
+}
 
 
 
@@ -918,7 +920,9 @@ header{
     width: auto;
 }
 /* настройка звездочек внутри слайда */
-
+.slider-item-opinion .star {
+    display: flex;
+}
 
 
 
